@@ -14,6 +14,11 @@ public class EnemyController : MonoBehaviour
     public void GotHit()
     {
         animator.SetTrigger("GotHit");
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.AddScore(1);
+        }
     }
 
 }
